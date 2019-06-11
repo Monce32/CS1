@@ -12,7 +12,7 @@ class Calculator {
 	int num2;
 	
 	public int add(int x, int y) {			//Constructor - is a method which doesn't have a return 
-											                //data type - used to create new objects
+					                //data type - used to create new objects
 		return x + y;
 	}
 	

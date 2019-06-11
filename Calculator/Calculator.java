@@ -8,26 +8,26 @@ import java.util.Scanner;
 
 class Calculator {
 	
-	int num1;
-	int num2;
+    int num1;
+    int num2;
 	
-	public int add(int x, int y) {			//Constructor - is a method which doesn't have a return 
-					                //data type - used to create new objects
-		return x + y;
-	}
+    public int add(int x, int y) {		//Constructor - is a method which doesn't have a return 
+				 	        //data type - used to create new objects
+        return x + y;
+    }
 	
-	public static void main(String[]args) {
+    public static void main(String[]args) {
   
-		Scanner scnr = new Scanner(System.in);
-		Calculator c1 = new Calculator();
+    	Scanner scnr = new Scanner(System.in);
+	Calculator c1 = new Calculator();
 		
-		System.out.print("Enter number1: ");
-		c1.num1 = scnr.nextInt();
+	System.out.print("Enter number1: ");
+	c1.num1 = scnr.nextInt();
 		
-		System.out.print("Enter number2: ");
-		c1.num2 = scnr.nextInt();
+	System.out.print("Enter number2: ");
+	c1.num2 = scnr.nextInt();
 		
-		System.out.println("The answer is = " + c1.add(c1.num1, c1.num2));
-			
-	}
+	System.out.println("The answer is = " + c1.add(c1.num1, c1.num2));
+		
+    }
 }

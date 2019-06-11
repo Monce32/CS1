@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 class Calculator {
 	
-  int num1;
+ 	int num1;
 	int num2;
 	
 	public int add(int x, int y) {			//Constructor - is a method which doesn't have a return 

@@ -1,2 +1,2 @@
 # CS1
-Computer Science 1 projects and assignments
+This folder contains all of the projects and assignments in this course which mostly deals with simple programs done in Java

@@ -30,8 +30,8 @@ Scanner scnr = new Scanner(System.in);
 	System.out.println("Enter the quantity");
 	quantity = scnr.nextInt();
 		
-		double tPrice = calcTotalPrice(quantity, price);
-		System.out.println("Total price is: " + tPrice);
+	double tPrice = calcTotalPrice(quantity, price);
+	System.out.println("Total price is: " + tPrice);
     }
 	
     public double calcTotalPrice(int q, double price) {

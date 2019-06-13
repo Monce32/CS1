@@ -1,0 +1,36 @@
+/*
+ * Text File Handling
+ */
+
+import java.util.*;
+import java.io.*;
+
+public class TextFileHandling {
+
+	public static void main(String [] args)throws IOException {
+		Scanner inFile = new Scanner(new File("NewText.txt"));
+		TextFileHandling obj = new TextFileHandling();
+		PrintWriter outFile = new PrintWriter(new File("NewText1.txt"));
+		obj.readTextFile(inFile, outFile);
+			
+		inFile.close();
+		outFile.close();
+	}
+	
+	public void readTextFile(Scanner inputFile, PrintWriter outputFile)throws IOException {
+		String line = "";
+		double total = 0;
+		while(inputFile.hasNextLine()) {
+			
+			line = inputFile.nextLine();
+			StringTokenizer inputTokens = new StringTokenizer (line, ","); //23.5
+			
+			while(inputTokens.hasMoreTokens()) {
+				total = total + Double.parseDouble(inputTokens.nextToken());
+			}
+		}
+		
+		outputFile.println("The total is " + total);
+		outputFile.close();
+	}
+}

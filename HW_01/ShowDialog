@@ -1,0 +1,44 @@
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class ShowDialog {
+
+	public static void main(String [] args) {
+		ShowDialog obj = new ShowDialog();
+		
+		obj.Input_Output();
+	}
+	public final double TAX_RATE = 0.08;
+
+	public double taxAmount(double x) {
+		
+		return (TAX_RATE * x) + x;
+	}
+		
+	public double finalAmount(double y, double x) {
+		
+		return y + ((TAX_RATE * x) + x);
+	}
+	
+	public void Input_Output(){
+		double amount;
+		int tipAmount;
+		Scanner scnr = new Scanner(System.in);
+		
+		JOptionPane.showInputDialog("Enter the amount of check " 
+						   + "before taxes are applied.");
+		amount = scnr.nextDouble();
+		
+		JOptionPane.showInputDialog("Enter the amount of tip you " 
+				   + "would like to give");
+		tipAmount = scnr.nextInt();
+		
+		JOptionPane.showMessageDialog(null, "Check amount: " + amount +
+									"\nCheck amount after taxes: " + taxAmount(amount) +
+									"\nTip amount: " + tipAmount +
+									"\nThe final amount after taxes including the tip amount"  
+									  + finalAmount(tipAmount, amount));
+		System.exit(0);
+
+	}
+}
